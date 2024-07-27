@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style type="text/css">
-      body {
-        /* margin: 0;
-          padding: 0; */
-        /* width: 100%; */
-        background: url(IMG/배경화면.jpg) no-repeat fixed;
+      body {        
+        background: url(image/시계배경.jpg) no-repeat fixed;
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -26,12 +23,15 @@
         color: #ffffff;
         margin-top: 400px;
       }
+      .complete{
+        text-decoration:line-through;  /*문자열 가운데 취소선*/
+      }
 
       #date {
         font-size: 3em;
       }
       #time {
-        font-size: 10em;
+        font-size: 6em;
       }
       #todo-input {
         padding: 10px;
@@ -45,17 +45,19 @@
       }
 
       #todo-list {
-        list-style-type: none;
+        list-style-type:circle;
         padding: 0;
       }
       #todo-list li {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
+        text-align:center;
+        padding: 15px;
+        /* border-bottom: 1px solid #ddd; 밑줄 싫어서 주석처리*/
       }
       #quote {
-        margin-top: 200px;
+        margin-top: 150px;
         font-size: 1.2em;
         font-style: italic;
+        color:black;
       }
     </style>
   </head>
@@ -65,10 +67,10 @@
       <div id="date"></div>
       <div id="time"></div>
 
-      <div class="todo-container">
+      <div class="todo-container"><br>
         <lable for="todo-input">What is your main goal for today?</lable><br /><br />
-        <input type="text" id="todo-input" placeholder="Input Text" />
-        <button id="add-btn">→</button>
+        <input type="text" id="todo-input" placeholder="할일 목록을 입력하세요." />
+        <button id="add-btn"> + </button>
         <ul id="todo-list"></ul>
       </div>
 
