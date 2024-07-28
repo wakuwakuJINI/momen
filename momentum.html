@@ -24,7 +24,8 @@
         margin-top: 400px;
       }
       .complete{
-        text-decoration:line-through;  /*문자열 가운데 취소선*/
+        text-decoration:line-through; 
+        text-decoration-color: red;   /*문자열 가운데 취소선*/
       }
 
       #date {
@@ -34,6 +35,9 @@
         font-size: 6em;
       }
       #todo-input {
+        border-width : 0 0 1px;
+        outline: none;
+        background-color: transparent;
         padding: 10px;
         font-size: 1em;
       }
@@ -43,22 +47,29 @@
         font-size: 1em;
         cursor: pointer;
       }
-
-      #todo-list {
-        list-style-type:circle;
+      #todo-list {        
         padding: 0;
+        margin-top: auto;
+        list-style:none;
+        display:inline-block;
+        justify-content: flex-start;
       }
-      #todo-list li {
-        text-align:center;
+      #todo-list li {   
+        font-size:2em;
+        text-align:left;
         padding: 15px;
+        
+       
+        
         /* border-bottom: 1px solid #ddd; 밑줄 싫어서 주석처리*/
       }
       #quote {
-        margin-top: 150px;
+        margin-top: 180px;
         font-size: 1.2em;
         font-style: italic;
         color:black;
       }
+    
     </style>
   </head>
 
@@ -71,7 +82,10 @@
         <lable for="todo-input">What is your main goal for today?</lable><br /><br />
         <input type="text" id="todo-input" placeholder="할일 목록을 입력하세요." />
         <button id="add-btn"> + </button>
-        <ul id="todo-list"></ul>
+        <div>
+          <ul id="todo-list"></ul>  
+        </div>
+        
       </div>
 
       <div id="quote"></div>
