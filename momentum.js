@@ -44,11 +44,12 @@ function updateClock() {
     const checkbox = document.createElement("input");
     checkbox.type = 'checkbox';
     checkbox.addEventListener('click', toggleComplete);
-    checkbox.style = marginRight = "10px";
+    // checkbox.style = marginRight = "20px";
+    
     const textNode=document.createTextNode(todoText);
   
     const deleteButton=document.createElement('button');    //list 삭제버튼 생성
-    deleteButton.textContent='X';
+    deleteButton.textContent='x';
     deleteButton.addEventListener('click',deleteTodo);      
       
     newTodo.appendChild(checkbox);
@@ -65,7 +66,7 @@ function updateClock() {
     const newTodo=event.target.parentElement;
 
     if(event.target.checked){               //체크박스가 체크되어있는지 확인
-      newTodo.classList.add('complete');    // 체크되어 있다면 complete class Css 속성 적용(가운데 취소선)
+      newTodo.classList.add('complete');    //체크되어 있다면 complete class Css 속성 적용(가운데 취소선)
     }else{
       newTodo.classList.remove('complete');
     }
@@ -76,7 +77,7 @@ function updateClock() {
     newTodo.remove();
   }
   
-  //명언
+  //명언추가
   
   const quotes = ["The best way to predict the future is to invent it.", "Life is 10% what happens to us and 90% how we react to it.", "The only way to do great work is to love what you do.", "Your time is limited, don't waste it living someone else's life.", "The best revenge is massive success."];
   
