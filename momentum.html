@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To do !</title>
     <style type="text/css">
-      body {        
-        background: url(image/시계배경.jpg) no-repeat fixed;
+      body {
+        background: url(IMG/배경화면.jpg) no-repeat fixed;
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -23,9 +23,9 @@
         color: #ffffff;
         margin-top: 400px;
       }
-      .complete{
-        text-decoration:line-through; 
-        text-decoration-color: red;   /*문자열 가운데 취소선*/
+      .complete {
+        text-decoration: line-through;
+        text-decoration-color: red; /*문자열 가운데 취소선*/
       }
 
       #date {
@@ -35,7 +35,7 @@
         font-size: 6em;
       }
       #todo-input {
-        border-width : 0 0 1px;
+        border-width: 0 0 1px;
         outline: none;
         background-color: transparent;
         padding: 10px;
@@ -47,29 +47,26 @@
         font-size: 1em;
         cursor: pointer;
       }
-      #todo-list {        
+      #todo-list {
         padding: 0;
         margin-top: auto;
-        list-style:none;
-        display:inline-block;
+        list-style: none;
+        display: inline-block;
         justify-content: flex-start;
       }
-      #todo-list li {   
-        font-size:2em;
-        text-align:left;
+      #todo-list li {
+        font-size: 2em;
+        text-align: left;
         padding: 15px;
-        
-       
-        
+
         /* border-bottom: 1px solid #ddd; 밑줄 싫어서 주석처리*/
       }
       #quote {
         margin-top: 180px;
         font-size: 1.2em;
         font-style: italic;
-        color:black;
+        color: black;
       }
-    
     </style>
   </head>
 
@@ -78,14 +75,14 @@
       <div id="date"></div>
       <div id="time"></div>
 
-      <div class="todo-container"><br>
+      <div class="todo-container">
+        <br />
         <lable for="todo-input">What is your main goal for today?</lable><br /><br />
         <input type="text" id="todo-input" placeholder="할일 목록을 입력하세요." />
-        <button id="add-btn"> + </button>
+        <button id="add-btn">+</button>
         <div>
-          <ul id="todo-list"></ul>  
+          <ul id="todo-list"></ul>
         </div>
-        
       </div>
 
       <div id="quote"></div>
